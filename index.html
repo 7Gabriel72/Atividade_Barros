@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerador de Senhas</h1>
+    <div class="password-box">
+      <input type="text" id="password" readonly>
+      <button onclick="generatePassword()">Gerar</button>
+    </div>
+    <div class="options">
+      <label>Tamanho: <span id="length-value">12</span></label>
+      <input type="range" id="length" min="4" max="32" value="12" oninput="updateLength()">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
