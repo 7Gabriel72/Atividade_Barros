@@ -6,21 +6,35 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+
+  <!--Tela de Login/inicial  -->
+  <div class="container" id="login-screen">
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Usuário">
+    <input type="password" id="password" placeholder="Senha">
+    <button onclick="fazerLogin()">Entrar</button>
+    <p id="erroLogin" class="erro"></p>
+  </div>
+
+  <!--Daqui para baixo e o Gerador de Senha -->
+  <div class="container hidden" id="password-screen">
     <h1>Gerador de Senhas</h1>
     <div class="password-box">
-      <input type="text" id="password" readonly>
+  <input type="text" id="generated-password" readonly>
       <button onclick="generatePassword()">Gerar</button>
     </div>
     <div class="options">
       <label>Tamanho: <span id="length-value">12</span></label>
       <input type="range" id="length" min="4" max="32" value="12" oninput="updateLength()">
     </div>
+    <button onclick="logout()">Sair</button>
   </div>
+
   <script src="script.js"></script>
-    <div class="Direitos">
+
+  <div class="Direitos">
     <footer>© Todos os Direitos Reservados</footer>
   </div>
+
 </body>
 </html>
-
