@@ -1,28 +1,32 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #1e1e2f;
+  background-image: url('site_fundo.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   margin: 0;
+  flex-direction: column;
 }
 
 .container {
   text-align: center;
-  background-color: #2a2a40;
+  background-color: 3434b542;
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.password-box {
-  margin-top: 20px;
-}
-
-input[type="text"] {
+input[type="text"],
+input[type="password"] {
   width: 250px;
   padding: 10px;
   font-size: 18px;
@@ -32,7 +36,6 @@ input[type="text"] {
 }
 
 button {
-  margin-left: 10px;
   padding: 10px 15px;
   font-size: 16px;
   border: none;
@@ -49,13 +52,27 @@ button:hover {
 .options {
   margin-top: 20px;
 }
+
+.password-box {
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.erro {
+  color: red;
+  margin-top: 10px;
+}
+
 .Direitos {
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
-  background-color: #837e7e;
+  background-color: #2f39b9;
   padding: 10px 0;
   box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
-  color: #000000;
+  color: #ec1313;
 }
