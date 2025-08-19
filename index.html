@@ -7,16 +7,18 @@
 </head>
 <body>
 
-  <!--Tela de Login/inicial  -->
   <div class="container" id="login-screen">
     <h1>Login</h1>
-    <input type="text" id="username" placeholder="Usuário">
-    <input type="password" id="password" placeholder="Senha">
-    <button onclick="fazerLogin()">Entrar</button>
-    <p id="erroLogin" class="erro"></p>
+    <form onsubmit="fazerLogin(); return false;">
+      <label for="username">Usuário</label>
+      <input type="text" id="username" placeholder="Usuário" autocomplete="username">
+      <label for="password">Senha</label>
+      <input type="password" id="password" placeholder="Senha" autocomplete="current-password">
+      <button type="submit">Entrar</button>
+      <p id="erroLogin" class="erro"></p>
+    </form>
   </div>
 
-  <!--Daqui para baixo e o Gerador de Senha -->
   <div class="container hidden" id="password-screen">
     <h1>Gerador de Senhas</h1>
     <div class="password-box">
